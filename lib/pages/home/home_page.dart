@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   List<Poll>? _polls;
   List<ResultPoll>? re_polls;
   var _isLoading = false;
-
+  var _isvote = false;
   @override
   void initState() {
     super.initState();
@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                    width: 800,
+                    width: 700,
                     height: 30,
                     child: ElevatedButton(
                         onPressed: () {
@@ -127,7 +127,10 @@ Column _buildchoies(List<String> choices) {
         Padding(
           padding: const EdgeInsets.only(bottom: 8.0, left: 30, top: 8),
           child: OutlinedButton(
-            onPressed: () {},
+            onPressed: () {
+              var check = ApiClient().VoteCheckIn(i + 1);
+              print(check);
+            },
             child: Text(choices[i]),
           ),
         )
