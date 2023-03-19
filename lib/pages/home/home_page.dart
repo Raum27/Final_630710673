@@ -1,6 +1,9 @@
+import 'dart:js';
+
 import 'package:election_2566_poll/models/resulpoll.dart';
 import 'package:flutter/material.dart';
 
+import '../../etc/utils.dart';
 import '../../models/poll.dart';
 import '../../services/api.dart';
 import '../my_scaffold.dart';
@@ -92,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                           _navigator(context, question, re_polls!);
                         },
                         child: Text('ดูผลโหวต'))),
-              )
+              ),
             ],
           ),
         ));
@@ -128,8 +131,10 @@ Column _buildchoies(List<String> choices) {
           padding: const EdgeInsets.only(bottom: 8.0, left: 30, top: 8),
           child: OutlinedButton(
             onPressed: () {
-              var check = ApiClient().VoteCheckIn(i + 1);
-              print(check);
+              // var check = ApiClient().VoteCheckIn(i + 1);
+              // _buildProgress();
+              // showOkDialog(context, choices[i], check);
+              // print(check);
             },
             child: Text(choices[i]),
           ),

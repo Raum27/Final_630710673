@@ -41,14 +41,14 @@ class ApiClient {
     return list.map((item) => ResultPoll.fromJson(item)).toList();
   }
 
-  Future<bool> VoteCheckIn(int id) async {
-    var responseBody =
-        await _makeRequest(HttpMethod.post, '/$id', {'answer': id});
-    bool result = responseBody.data;
-    print(
-        "โหวตได้แล้ววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววว");
-    return result;
-  }
+  // Future<bool> VoteCheckIn(int id) async {
+  //   var responseBody =
+  //       await _makeRequest(HttpMethod.post, '/$id', {'answer': id});
+  //   bool result = responseBody.data;
+  //   print("โหวตได้แล้วววววววววววววววววววววววววววววววววววววววววววววววววววววววววววววว");
+  //   return result;
+  // }
+
   // todo: สร้างเมธอดสำหรับ request ไปยัง API โดยเรียกใช้เมธอด _makeRequest() ที่อาจารย์เตรียมไว้ให้ด้านล่างนี้
   // ดูตัวอย่างได้จากเมธอด getAllStudents(), getStudentById(), etc. ในโปรเจ็ค class_attendance
   // https://github.com/3bugs/cpsu_class_attendance_frontend/blob/master/lib/services/api.dart
